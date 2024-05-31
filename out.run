@@ -1,0 +1,13 @@
+
+======================================================================================
+                  Resource Usage on 2024-05-07 11:49:00:
+   Job Id:             115146851.gadi-pbs
+   Project:            q90
+   Exit Status:        0
+   Service Units:      6.06
+   NCPUs Requested:    8                      NCPUs Used: 8               
+                                           CPU Time Used: 02:15:17        
+   Memory Requested:   39.06GB               Memory Used: 12.45GB         
+   Walltime requested: 05:00:00            Walltime Used: 00:18:37        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================
