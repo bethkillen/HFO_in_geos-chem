@@ -10,8 +10,8 @@
 #============================================================================
 simulation:
   name: fullchem
-  start_date: [20190701, 000000]
-  end_date: [20190801, 000000]
+  start_date: [20190101, 000000]
+  end_date: [20190102, 000000]
   root_data_dir: /g/data/m19/geos-chem/data/ExtData
   met_field: MERRA2
   species_database_file: ./species_database.yml
@@ -343,6 +343,12 @@ operations:
       - SOAS
       - TOLU
       - XYLE
+      - HFO
+      - CF3
+      - CF3CO
+      - HFC
+      - TFALD
+      - CHFO
 
   wet_deposition:
     activate: true

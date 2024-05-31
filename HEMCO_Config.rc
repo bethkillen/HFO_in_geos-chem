@@ -31,7 +31,7 @@ GCAPVERTRES:                 47
 Logfile:                     *
 DiagnFile:                   HEMCO_Diagn.rc
 DiagnPrefix:                 ./OutputDir/HEMCO_diagnostics
-DiagnFreq:                   Monthly
+DiagnFreq:                   Daily
 Wildcard:                    *
 Separator:                   /
 Unit tolerance:              1
@@ -145,11 +145,11 @@ VerboseOnCores:              root       # Accepted values: root all
 # update ExtNr and Cat in HEMCO_Diagn.rc to properly save out emissions for
 # any affected species.
 #------------------------------------------------------------------------------
-    --> OFFLINE_DUST           :       true     # 1980-2019
-    --> OFFLINE_BIOGENICVOC    :       true     # 1980-2020
-    --> OFFLINE_SEASALT        :       true     # 1980-2019
-    -->  CalcBrSeasalt         :       true
-    --> OFFLINE_SOILNOX        :       true     # 1980-2020
+    --> OFFLINE_DUST           :       false     # 1980-2019
+    --> OFFLINE_BIOGENICVOC    :       false     # 1980-2020
+    --> OFFLINE_SEASALT        :       false     # 1980-2019
+    -->  CalcBrSeasalt         :       false
+    --> OFFLINE_SOILNOX        :       false     # 1980-2020
 # ----- NON-EMISSIONS DATA ----------------------------------------------------
     --> UVALBEDO               :       true     # 1985
     --> CCM_STRAT_Bry          :       true     # 2007
@@ -172,7 +172,7 @@ VerboseOnCores:              root       # Accepted values: root all
 103     LightNOx               : on    NO
     --> LightningClimatology   :       false
     --> CDF table              :       $ROOT/LIGHTNOX/v2014-07/light_dist.ott2010.dat
-104     SoilNOx                : off   NO
+104     SoilNOx                : on    NO
     --> Use fertilizer NOx     :       true
 105     DustDead               : off   DST1/DST2/DST3/DST4
     --> Mass tuning factor     :       7.8533e-4
@@ -3440,7 +3440,7 @@ VerboseOnCores:              root       # Accepted values: root all
 # --- GEOS-Chem restart file ---
 #==============================================================================
 (((GC_RESTART
-* SPC_           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 SpeciesRst_?ALL?    $YYYY/$MM/$DD/$HH EFYO xyz 1 * - 1 1
+* SPC_           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 SpeciesRst_?ALL?    $YYYY/$MM/$DD/$HH CYS  xyz 1 * - 1 1
 * DELPDRY        ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Met_DELPDRY         $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
 * KPP_HVALUE     ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_KPPHvalue      $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
 * WETDEP_N       ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_WetDepNitrogen $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
