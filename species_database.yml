@@ -1323,6 +1323,14 @@ FixedOH:
   FullName: Hydroxyl radical (external input for carbon mechanism)
   Is_Gas: true
   MW_g: 17.01
+FRAD:
+  Formula: C2H2F3O3
+  FullName: hydroxyperoxy radical generated from reaction between TFALD and HO2
+  MW_g: 131.03
+FRAD2:
+  Formula: C2H2F3O2
+  FullName: hydroxy radical generated from FRAD + NO reaction 
+  MW_g: 115.03
 FURA:
   DD_F0: 1.0
   DD_Hstar: 1.80e-1
