@@ -89,8 +89,8 @@ operations:
   photolysis:
     activate: true
     input_directories:
-      fastjx_input_dir: /g/data/m19/geos-chem/data/ExtData/CHEM_INPUTS/FAST_JX/v2021-10/
-      cloudj_input_dir: /g/data/m19/geos-chem/data/ExtData/CHEM_INPUTS/CLOUD_J/v2023-05/
+      fastjx_input_dir: /g/data/m19/geos-chem/data/ExtData/CHEM_INPUTS_HFO/FAST_JX/v2021-10/
+      cloudj_input_dir: /g/data/m19/geos-chem/data/ExtData/CHEM_INPUTS_HFO/CLOUD_J/v2023-05/
     overhead_O3:
       use_online_O3_from_model: true 
       use_column_O3_from_met: true
@@ -349,6 +349,7 @@ operations:
       - HFC
       - TFALD
       - CHFO
+      - HCO
 
   wet_deposition:
     activate: true

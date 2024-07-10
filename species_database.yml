@@ -677,10 +677,12 @@ CF3:
   Formula: CF3
   FullName: trifluoromethyl radical
   MW_g: 69.006
+  Is_Gas: true
 CF3CO:
   Formula: C2F3O
   FullName: radical formed from OH abstraction of TFALD
   MW_g: 97.0160
+  Is_Gas: true
 CH2Br2:
   Formula: CH2Br2
   FullName: Dibromomethane
@@ -758,6 +760,7 @@ CHFO:
   Formula: CHFO
   FullName: formyl fluoride
   MW_g: 48.016
+  Is_Gas: true
 CH3CHOO:
   Formula: CH3CHOO
   FullName: Criegee intermediate
@@ -1327,10 +1330,12 @@ FRAD:
   Formula: C2H2F3O3
   FullName: hydroxyperoxy radical generated from reaction between TFALD and HO2
   MW_g: 131.03
+  Is_Gas: true
 FRAD2:
   Formula: C2H2F3O2
   FullName: hydroxy radical generated from FRAD + NO reaction 
   MW_g: 115.03
+  Is_Gas: true
 FURA:
   DD_F0: 1.0
   DD_Hstar: 1.80e-1
@@ -1456,6 +1461,11 @@ HBr:
   Is_WetDep: true
   MW_g: 80.91
   WD_RetFactor: 1.0e+0
+HCO:
+  Formula: HCO
+  FullName: Hydrogen Carbonate
+  MW_g: 44.01
+  Is_Gas: true 
 HC5A:
   DD_F0: 0.0
   DD_Hstar: 7.8e+3
@@ -1528,10 +1538,12 @@ HFO:
   Formula: C3H2F4
   FullName: 1,3,3,3-Tetrafluoropropene
   MW_g: 114.043
+  Is_Gas: true
 HFC:
   Formula: CHF3
   FullName: Fluoroform
   MW_g: 70.01
+  Is_Gas: true
 Hg0_PROP: &Hg0properties
   DD_F0: 3.0e-5
   DD_Hstar: 0.11
@@ -4674,6 +4686,8 @@ TFALD:
   Formula: CF3CHO
   FullName: Trifluoroacetaldehyde
   MW_g: 98.024
+  Is_Gas: true
+  Is_Photolysis: true
 TOLU:
   Formula: C7H8
   FullName: Toluene
