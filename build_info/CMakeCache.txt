@@ -62,8 +62,11 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
+//Value Computed by CMake.
+CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/scratch/q90/bk3658/rundirs/HFO_GEOS-Chem/build/CMakeFiles/pkgRedirects
+
 //Fortran compiler
-CMAKE_Fortran_COMPILER:FILEPATH=/apps/intel-ct/wrapper/ifort
+CMAKE_Fortran_COMPILER:STRING=/apps/intel-ct/wrapper/ifort
 
 //Flags used by the Fortran compiler during all build types.
 CMAKE_Fortran_FLAGS:STRING=
@@ -437,6 +440,9 @@ XIAR:FILEPATH=/apps/intel-ct/2020.3.304/compiler/bin/intel64/xiar
 geos-chem-classic_BINARY_DIR:STATIC=/scratch/q90/bk3658/rundirs/HFO_GEOS-Chem/build
 
 //Value Computed by CMake
+geos-chem-classic_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
 geos-chem-classic_SOURCE_DIR:STATIC=/scratch/q90/bk3658/rundirs/HFO_GEOS-Chem/CodeDir
 
 
@@ -617,4 +623,6 @@ OpenMP_iomp5_LIBRARY-ADVANCED:INTERNAL=1
 RUN_FAILED:INTERNAL=0
 //ADVANCED property for variable: XIAR
 XIAR-ADVANCED:INTERNAL=1
+//linker supports push/pop state
+_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 
