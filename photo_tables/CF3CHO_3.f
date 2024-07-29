@@ -64,7 +64,7 @@
 !     it has 7% error in the very short wavel S-R bins of pratmo.
 
 !not extrapolated, uses Q-yld at 300K min
-        TTT(1) = 223.
+        TTT(1) = 298.
         TTT(2) = 298.
         TITLTBL(1) = 'CF3CHO '
         TITLTBL(2) = 'CF3CHOb '

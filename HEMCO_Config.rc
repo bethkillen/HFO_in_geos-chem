@@ -31,7 +31,7 @@ GCAPVERTRES:                 47
 Logfile:                     *
 DiagnFile:                   HEMCO_Diagn.rc
 DiagnPrefix:                 ./OutputDir/HEMCO_diagnostics
-DiagnFreq:                   Daily
+DiagnFreq:                   Monthly
 Wildcard:                    *
 Separator:                   /
 Unit tolerance:              1
@@ -253,6 +253,9 @@ VerboseOnCores:              root       # Accepted values: root all
 # ExtNr	Name sourceFile sourceVar sourceTime C/R/E SrcDim SrcUnit Species ScalIDs Cat Hier
 
 (((EMISSIONS
+
+ 0 HFO /home/562/bk3658/HEMCO_inputs/gridded_emissions.nc4 __xarray_dataarray_variable__ 2005/1-2005/12/31/1 C xy kg/m2/s HFO - 1 1
+ 
 
 #==============================================================================
 # --- APEI (Canada) ---
@@ -3440,7 +3443,7 @@ VerboseOnCores:              root       # Accepted values: root all
 # --- GEOS-Chem restart file ---
 #==============================================================================
 (((GC_RESTART
-* SPC_           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 SpeciesRst_?ALL?    $YYYY/$MM/$DD/$HH CYS  xyz 1 * - 1 1
+* SPC_           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 SpeciesRst_?ALL?    $YYYY/$MM/$DD/$HH C    xyz 1 * - 1 1
 * DELPDRY        ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Met_DELPDRY         $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
 * KPP_HVALUE     ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_KPPHvalue      $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
 * WETDEP_N       ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_WetDepNitrogen $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
@@ -4543,6 +4546,8 @@ VerboseOnCores:              root       # Accepted values: root all
 (((AFCID
 1010 INDIA_MASK  $ROOT/MASKS/v2019-05/India_mask.generic.1x1.nc                MASK     2000/1/1/0 C xy 1 1  67/7/99/39
 )))AFCID
+
+#1011 BEIJING_BOX 115/39/118/42                                                 -        2000/1/1/0 C xy 1 1  115/39/118/42
 
 )))EMISSIONS
 
