@@ -38,7 +38,7 @@ COLLECTIONS: 'Restart',
              ##'ConcAboveSfc',
              ##'ConcAfterChem',
              ##'DryDep',
-             #'JValues',
+             'JValues',
              ##'KppDiags',
              ##'KppARDiags',
              ##'LevelEdgeDiags',
@@ -72,8 +72,8 @@ COLLECTIONS: 'Restart',
 # Available for all simulations
 #==============================================================================
   Restart.filename:           './Restarts/GEOSChem.Restart.%y4%m2%d2_%h2%n2z.nc4',
-  Restart.frequency:          00000001 000000
-  Restart.duration:           00000001 000000
+  Restart.frequency:          00000100 000000
+  Restart.duration:           00000100 000000
   Restart.mode:               'instantaneous'
   Restart.fields:             'SpeciesRst_?ALL?               ',
                               'Chem_AeroH2OSNA                ',
@@ -122,7 +122,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   SpeciesConc.template:       '%y4%m2%d2_%h2%n2z.nc4',
   SpeciesConc.frequency:      00000001 000000
-  SpeciesConc.duration:       00000001 000000
+  SpeciesConc.duration:       00000100 000000
   SpeciesConc.mode:           'time-averaged'
   SpeciesConc.fields:         'SpeciesConcVV_?ALL?           ',
                               ##'SpeciesConcMND_?ALL?          ',
@@ -380,7 +380,7 @@ COLLECTIONS: 'Restart',
 # Available for all full-chemistry simulations with photolysis
 #==============================================================================
   JValues.template:           '%y4%m2%d2_%h2%n2z.nc4',
-  JValues.frequency:          00000100 000000
+  JValues.frequency:          00000001 000000
   JValues.duration:           00000100 000000
   JValues.mode:               'time-averaged'
   JValues.fields:             'Jval_?PHO?                    ',

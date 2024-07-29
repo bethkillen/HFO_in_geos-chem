@@ -1460,12 +1460,7 @@ HBr:
   Is_Gas: true
   Is_WetDep: true
   MW_g: 80.91
-  WD_RetFactor: 1.0e+0
-HCO:
-  Formula: HCO
-  FullName: Hydrogen Carbonate
-  MW_g: 44.01
-  Is_Gas: true 
+  WD_RetFactor: 1.0e+0  
 HC5A:
   DD_F0: 0.0
   DD_Hstar: 7.8e+3
@@ -1539,11 +1534,13 @@ HFO:
   FullName: 1,3,3,3-Tetrafluoropropene
   MW_g: 114.043
   Is_Gas: true
+  Is_Advected: true 
 HFC:
   Formula: CHF3
   FullName: Fluoroform
   MW_g: 70.01
   Is_Gas: true
+  Is_Advected: true
 Hg0_PROP: &Hg0properties
   DD_F0: 3.0e-5
   DD_Hstar: 0.11
@@ -4682,12 +4679,27 @@ TiF2:
   Formula: Ti
   Fullname: Titanium on dust, Reff = 1.4 microns
   MW_g: 47.87
+TFA:
+  Formula: CF3COOH
+  FullName: Trifluoroacetic acid 
+  MW_g: 114.02
+  Henry_CR: 9300
+  Henry_K0: 8.9e+01
+  Is_Gas: true 
+  Is_Advected: true
+  Is_DryDep: true
+  Is_WetDep: true
 TFALD:
   Formula: CF3CHO
   FullName: Trifluoroacetaldehyde
   MW_g: 98.024
+  Henry_CR: 5900
+  Henry_K0: 9.87e+04
   Is_Gas: true
   Is_Photolysis: true
+  Is_Advected: true
+  Is_WetDep: true
+  Is_DryDep: true
 TOLU:
   Formula: C7H8
   FullName: Toluene
@@ -4752,3 +4764,8 @@ XYLE:
   Is_Advected: true
   Is_Gas: true
   MW_g: 106.18
+HCO: 
+  Formula: HCO
+  FullName: Hydrogen Carbonate 
+  Is_Gas: true
+  MW_g: 29.02
