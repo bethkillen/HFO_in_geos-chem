@@ -33,28 +33,28 @@ COLLECTIONS: 'Restart',
              #'AdvFluxVert',
              #'AerosolMass',
              #'Aerosols',
-             ##'Budget',
+             #'Budget',
              ##'CloudConvFlux',
              ##'ConcAboveSfc',
              ##'ConcAfterChem',
-             ##'DryDep',
+             'DryDep',
              'JValues',
              ##'KppDiags',
              ##'KppARDiags',
              ##'LevelEdgeDiags',
-             ##'ProdLoss',
+             'ProdLoss',
              ##'RRTMG',
              ##'RxnRates',
              ##'RxnConst',
              ##'SatDiagn',
              ##'SatDiagnEdge',
              ##'StateChm',
-             #'StateMet',
+             'StateMet',
              ##'StratBM',
              ##'Tomas',
              ##'UVFlux',
-             ##'WetLossConv',
-             ##'WetLossLS',
+             'WetLossConv',
+             'WetLossLS',
              ##'BoundaryConditions',
 ::
 ###############################################################################
@@ -73,7 +73,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   Restart.filename:           './Restarts/GEOSChem.Restart.%y4%m2%d2_%h2%n2z.nc4',
   Restart.frequency:          00000100 000000
-  Restart.duration:           00000100 000000
+  Restart.duration:           00010000 000000
   Restart.mode:               'instantaneous'
   Restart.fields:             'SpeciesRst_?ALL?               ',
                               'Chem_AeroH2OSNA                ',
@@ -121,8 +121,8 @@ COLLECTIONS: 'Restart',
 #                                    SpeciesConcMND [molec/cm3]
 #==============================================================================
   SpeciesConc.template:       '%y4%m2%d2_%h2%n2z.nc4',
-  SpeciesConc.frequency:      00000001 000000
-  SpeciesConc.duration:       00000100 000000
+  SpeciesConc.frequency:      00000100 000000
+  SpeciesConc.duration:       00010000 000000
   SpeciesConc.mode:           'time-averaged'
   SpeciesConc.fields:         'SpeciesConcVV_?ALL?           ',
                               ##'SpeciesConcMND_?ALL?          ',
@@ -365,7 +365,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   DryDep.template:            '%y4%m2%d2_%h2%n2z.nc4',
   DryDep.frequency:           00000100 000000
-  DryDep.duration:            00000100 000000
+  DryDep.duration:            00010000 000000
   DryDep.mode:                'time-averaged'
   DryDep.fields:              'DryDep_?DRY?                  ',
                               'DryDepVel_?DRY?               ',
@@ -380,8 +380,8 @@ COLLECTIONS: 'Restart',
 # Available for all full-chemistry simulations with photolysis
 #==============================================================================
   JValues.template:           '%y4%m2%d2_%h2%n2z.nc4',
-  JValues.frequency:          00000001 000000
-  JValues.duration:           00000100 000000
+  JValues.frequency:          00000100 000000
+  JValues.duration:           00010000 000000
   JValues.mode:               'time-averaged'
   JValues.fields:             'Jval_?PHO?                    ',
                               'JvalO3O1D                     ',
@@ -464,7 +464,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   ProdLoss.template:          '%y4%m2%d2_%h2%n2z.nc4',
   ProdLoss.frequency:         00000100 000000
-  ProdLoss.duration:          00000100 000000
+  ProdLoss.duration:          00010000 000000
   ProdLoss.mode:              'time-averaged'
   ProdLoss.fields:            'Prod_?PRD?                    ',
                               'ProdBCPIfromBCPO              ',
@@ -687,7 +687,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   StateChm.template:          '%y4%m2%d2_%h2%n2z.nc4',
   StateChm.frequency:         00000100 000000
-  StateChm.duration:          00000100 000000
+  StateChm.duration:          00010000 000000
   StateChm.mode:              'time-averaged'
   StateChm.fields:            'Chem_IsorropAeropHAccum       ',
                               'Chem_IsorropAeropHCoarse      ',
@@ -721,7 +721,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   StateMet.template:          '%y4%m2%d2_%h2%n2z.nc4',
   StateMet.frequency:         00000100 000000
-  StateMet.duration:          00000100 000000
+  StateMet.duration:          00010000 000000
   StateMet.mode:              'time-averaged'
   StateMet.fields:            'Met_AD                        ',
                               'Met_AIRDEN                    ',
@@ -1321,7 +1321,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   WetLossConv.template:       '%y4%m2%d2_%h2%n2z.nc4',
   WetLossConv.frequency:      00000100 000000
-  WetLossConv.duration:       00000100 000000
+  WetLossConv.duration:       00010000 000000
   WetLossConv.mode:           'time-averaged'
   WetLossConv.fields:         'WetLossConv_?WET?             ',
                               'WetLossConvFrac_?WET?         ',
@@ -1336,7 +1336,7 @@ COLLECTIONS: 'Restart',
 # Loss due to rainout and washout (per deposited species)
   WetLossLS.template:         '%y4%m2%d2_%h2%n2z.nc4',
   WetLossLS.frequency:        00000100 000000
-  WetLossLS.duration:         00000100 000000
+  WetLossLS.duration:         00010000 000000
   WetLossLS.mode:             'time-averaged'
   WetLossLS.fields:           'WetLossLS_?WET?               ',
 ::

@@ -1,13 +1,17 @@
+Running GEOS-Chem for 2019 01
+Job number 1 returned an error status 159 - stopping job sequence.
+There is now an error file at:
+Mon Sep 30 11:45:36 AEST 2024
 
 ======================================================================================
-                  Resource Usage on 2024-05-07 11:49:00:
-   Job Id:             115146851.gadi-pbs
+                  Resource Usage on 2024-09-30 11:45:44:
+   Job Id:             125782515.gadi-pbs
    Project:            q90
-   Exit Status:        0
-   Service Units:      6.06
-   NCPUs Requested:    8                      NCPUs Used: 8               
-                                           CPU Time Used: 02:15:17        
-   Memory Requested:   39.06GB               Memory Used: 12.45GB         
-   Walltime requested: 05:00:00            Walltime Used: 00:18:37        
+   Exit Status:        159 (Linux Signal 31 SIGSYS Bad system call.)
+   Service Units:      1.24
+   NCPUs Requested:    16                     NCPUs Used: 16              
+                                           CPU Time Used: 00:13:42        
+   Memory Requested:   24.41GB               Memory Used: 14.76GB         
+   Walltime requested: 12:00:00            Walltime Used: 00:02:20        
    JobFS requested:    100.0MB                JobFS used: 0B              
 ======================================================================================

@@ -235,7 +235,7 @@ C----------JPL 2010 Table 4D-4 pg297.
  
       real*4, parameter, dimension(4)  :: Q298 =
      &[0.16,
-     & 0.005, 0.003,
+     & 0.005, 0.00023,
      & 0.0]
 
       if (WW .lt. WNQ(1) .or. WW .gt. WNQ(4)) goto 2

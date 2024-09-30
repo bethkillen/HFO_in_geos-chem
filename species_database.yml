@@ -1327,15 +1327,31 @@ FixedOH:
   Is_Gas: true
   MW_g: 17.01
 FRAD:
-  Formula: C2H2F3O3
-  FullName: hydroxyperoxy radical generated from reaction between TFALD and HO2
-  MW_g: 131.03
+  FullName: Radical produced by TFALD + HO2
+  Formula: CF3CH(OH)OO  
   Is_Gas: true
+  MW_g: 131
 FRAD2:
-  Formula: C2H2F3O2
-  FullName: hydroxy radical generated from FRAD + NO reaction 
-  MW_g: 115.03
+  FullName: radical 
+  Formula: CF3CH(OH)O
   Is_Gas: true
+  MW_g: 115
+PFRAD2:
+  FullName: proxy to show production of FRAD2
+  Formula: CF3CH(OH)O
+  MW_g: 115
+LFRAD:
+  FullName: Dummy species to track loss of FRAD in reversible reaction 
+  Is_Gas: true
+  MW_g: 131  
+PFRAD:
+  FullName: Dummy species to track prod of FRAD in reversible reaction      
+  Is_Gas: true
+  MW_g: 131 
+LFRAD2:
+  FullName: Dummy species to track loss of FRAD2 in reversible reaction
+  Is_Gas: true
+  MW_g: 115
 FURA:
   DD_F0: 1.0
   DD_Hstar: 1.80e-1
@@ -1531,16 +1547,37 @@ HCOOH:
   WD_RetFactor: 2.0e-2
 HFO:
   Formula: C3H2F4
-  FullName: 1,3,3,3-Tetrafluoropropene
-  MW_g: 114.043
+  FullName: HFO-1234ze
+  MW_g: 114.04
+  Is_Gas: true
+  Is_Advected: true
+HFC:
+  DD_F0: 1.0
+  DD_Hstar: 0.013
+  Formula: CHF3
+  FullName: HFC-23
+  Is_DryDep: true
+  MW_g: 70.01
   Is_Gas: true
   Is_Advected: true 
-HFC:
+HFCa:
+  DD_F0: 1.0
+  DD_Hstar: 0.013 
   Formula: CHF3
-  FullName: Fluoroform
+  FullName: HFC-23 (photolysis)
   MW_g: 70.01
   Is_Gas: true
   Is_Advected: true
+  Is_DryDep: true
+HFCb:
+  DD_F0: 1.0
+  DD_Hstar: 0.013
+  Formula: CHF3
+  FullName: HFC-23 (ozonolysis)
+  MW_g: 70.01
+  Is_Gas: true
+  Is_Advected: true
+  Is_DryDep: true
 Hg0_PROP: &Hg0properties
   DD_F0: 3.0e-5
   DD_Hstar: 0.11
@@ -2809,6 +2846,26 @@ LCO:
   FullName: Dummy species to track loss rate of CO
   Is_Gas: true
   MW_g: 28.01
+LHFO:
+  FullName: Dummy species to track loss rate of HFO
+  Is_Gas: true
+  MW_g: 114.043
+LTFA:
+  FullName: Dummy species to track loss rate of TFA
+  Is_Gas: true
+  MW_g: 114.02
+LTFALD:
+  FullName: Dummy species to track loss rate of TFALD
+  Is_Gas: true
+  MW_g: 98.024
+LHFCa:
+  FullName: Dummy species to track loss rate of HFC from photolysis
+  Is_Gas: true
+  MW_g: 70.01
+LHFCb:
+  FullName: Dummy species to track loss rate of HFC from ozonolysis
+  Is_Gas: true
+  MW_g: 70.01
 LIMO:
   DD_F0: 0.0
   DD_Hstar: 7.0e-2
@@ -3855,6 +3912,22 @@ PCO:
   FullName: Dummy species to track production rate of CO
   Is_Gas: true
   MW_g: 28.01
+PCHFO:
+  FullName: Dummy species to track production rate  of CHFO
+  Is_Gas: true
+  MW_g: 48.016
+PTFALD:
+  FullName: Dummy species to track production rate of TFALD
+  Is_Gas: true
+  MW_g: 98.024
+PHFCa:
+  FullName: Dummy species to track production rate of HFC from photolysis
+  Is_Gas: true
+  MW_g: 70.01
+PHFCb:
+  FullName: Dummy species to track production rate of HFC from ozonolysis
+  Is_Gas: true
+  MW_g: 70.01 
 pFe:
   DD_F0: 0.0
   DD_Hstar: 0.0
@@ -4680,26 +4753,30 @@ TiF2:
   Fullname: Titanium on dust, Reff = 1.4 microns
   MW_g: 47.87
 TFA:
+  DD_F0: 1.0
+  DD_Hstar: 8900
   Formula: CF3COOH
-  FullName: Trifluoroacetic acid 
+  FullName: Trifluoroacetic acid
   MW_g: 114.02
   Henry_CR: 9300
-  Henry_K0: 8.9e+01
-  Is_Gas: true 
-  Is_Advected: true
+  Henry_K0: 8900
   Is_DryDep: true
   Is_WetDep: true
+  WD_RetFactor: 2.0e-2
 TFALD:
+  DD_F0: 1.0
+  DD_Hstar: 100
   Formula: CF3CHO
   FullName: Trifluoroacetaldehyde
   MW_g: 98.024
-  Henry_CR: 5900
-  Henry_K0: 9.87e+04
   Is_Gas: true
   Is_Photolysis: true
   Is_Advected: true
-  Is_WetDep: true
   Is_DryDep: true
+  Is_WetDep: true
+  Henry_CR: 5900
+  Henry_K0: 100
+  WD_RetFactor: 2.0e-2
 TOLU:
   Formula: C7H8
   FullName: Toluene
@@ -4768,4 +4845,4 @@ HCO:
   Formula: HCO
   FullName: Hydrogen Carbonate 
   Is_Gas: true
-  MW_g: 29.02
+  MW_g: 29.02 
