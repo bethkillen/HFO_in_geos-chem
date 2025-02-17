@@ -38,18 +38,18 @@ COLLECTIONS: 'Restart',
              ##'ConcAboveSfc',
              ##'ConcAfterChem',
              'DryDep',
-             'JValues',
+             #'JValues',
              ##'KppDiags',
              ##'KppARDiags',
              ##'LevelEdgeDiags',
-             'ProdLoss',
+             #'ProdLoss',
              ##'RRTMG',
              ##'RxnRates',
              ##'RxnConst',
              ##'SatDiagn',
              ##'SatDiagnEdge',
              ##'StateChm',
-             'StateMet',
+             #'StateMet',
              ##'StratBM',
              ##'Tomas',
              ##'UVFlux',
@@ -72,8 +72,8 @@ COLLECTIONS: 'Restart',
 # Available for all simulations
 #==============================================================================
   Restart.filename:           './Restarts/GEOSChem.Restart.%y4%m2%d2_%h2%n2z.nc4',
-  Restart.frequency:          00000100 000000
-  Restart.duration:           00010000 000000
+  Restart.frequency:          00000001 000000
+  Restart.duration:           00000001 000000
   Restart.mode:               'instantaneous'
   Restart.fields:             'SpeciesRst_?ALL?               ',
                               'Chem_AeroH2OSNA                ',
@@ -122,7 +122,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   SpeciesConc.template:       '%y4%m2%d2_%h2%n2z.nc4',
   SpeciesConc.frequency:      00000100 000000
-  SpeciesConc.duration:       00010000 000000
+  SpeciesConc.duration:       00000100 000000
   SpeciesConc.mode:           'time-averaged'
   SpeciesConc.fields:         'SpeciesConcVV_?ALL?           ',
                               ##'SpeciesConcMND_?ALL?          ',
@@ -365,7 +365,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   DryDep.template:            '%y4%m2%d2_%h2%n2z.nc4',
   DryDep.frequency:           00000100 000000
-  DryDep.duration:            00010000 000000
+  DryDep.duration:            00000100 000000
   DryDep.mode:                'time-averaged'
   DryDep.fields:              'DryDep_?DRY?                  ',
                               'DryDepVel_?DRY?               ',
@@ -1321,7 +1321,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
   WetLossConv.template:       '%y4%m2%d2_%h2%n2z.nc4',
   WetLossConv.frequency:      00000100 000000
-  WetLossConv.duration:       00010000 000000
+  WetLossConv.duration:       00000100 000000
   WetLossConv.mode:           'time-averaged'
   WetLossConv.fields:         'WetLossConv_?WET?             ',
                               'WetLossConvFrac_?WET?         ',
@@ -1336,7 +1336,7 @@ COLLECTIONS: 'Restart',
 # Loss due to rainout and washout (per deposited species)
   WetLossLS.template:         '%y4%m2%d2_%h2%n2z.nc4',
   WetLossLS.frequency:        00000100 000000
-  WetLossLS.duration:         00010000 000000
+  WetLossLS.duration:         00000100 000000
   WetLossLS.mode:             'time-averaged'
   WetLossLS.fields:           'WetLossLS_?WET?               ',
 ::

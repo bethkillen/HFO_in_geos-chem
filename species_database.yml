@@ -1552,32 +1552,11 @@ HFO:
   Is_Gas: true
   Is_Advected: true
 HFC:
-  DD_F0: 1.0
-  DD_Hstar: 0.013
   Formula: CHF3
   FullName: HFC-23
-  Is_DryDep: true
   MW_g: 70.01
   Is_Gas: true
   Is_Advected: true 
-HFCa:
-  DD_F0: 1.0
-  DD_Hstar: 0.013 
-  Formula: CHF3
-  FullName: HFC-23 (photolysis)
-  MW_g: 70.01
-  Is_Gas: true
-  Is_Advected: true
-  Is_DryDep: true
-HFCb:
-  DD_F0: 1.0
-  DD_Hstar: 0.013
-  Formula: CHF3
-  FullName: HFC-23 (ozonolysis)
-  MW_g: 70.01
-  Is_Gas: true
-  Is_Advected: true
-  Is_DryDep: true
 Hg0_PROP: &Hg0properties
   DD_F0: 3.0e-5
   DD_Hstar: 0.11
@@ -2858,12 +2837,8 @@ LTFALD:
   FullName: Dummy species to track loss rate of TFALD
   Is_Gas: true
   MW_g: 98.024
-LHFCa:
-  FullName: Dummy species to track loss rate of HFC from photolysis
-  Is_Gas: true
-  MW_g: 70.01
-LHFCb:
-  FullName: Dummy species to track loss rate of HFC from ozonolysis
+LHFC:
+  FullName: Dummy species to track loss of HFC
   Is_Gas: true
   MW_g: 70.01
 LIMO:
@@ -3920,11 +3895,7 @@ PTFALD:
   FullName: Dummy species to track production rate of TFALD
   Is_Gas: true
   MW_g: 98.024
-PHFCa:
-  FullName: Dummy species to track production rate of HFC from photolysis
-  Is_Gas: true
-  MW_g: 70.01
-PHFCb:
+PHFC:
   FullName: Dummy species to track production rate of HFC from ozonolysis
   Is_Gas: true
   MW_g: 70.01 
@@ -4765,7 +4736,7 @@ TFA:
   WD_RetFactor: 2.0e-2
 TFALD:
   DD_F0: 1.0
-  DD_Hstar: 100
+  DD_Hstar: 10000
   Formula: CF3CHO
   FullName: Trifluoroacetaldehyde
   MW_g: 98.024
@@ -4775,7 +4746,7 @@ TFALD:
   Is_DryDep: true
   Is_WetDep: true
   Henry_CR: 5900
-  Henry_K0: 100
+  Henry_K0: 10000
   WD_RetFactor: 2.0e-2
 TOLU:
   Formula: C7H8

@@ -31,7 +31,7 @@ GCAPVERTRES:                 47
 Logfile:                     *
 DiagnFile:                   HEMCO_Diagn.rc
 DiagnPrefix:                 ./OutputDir/HEMCO_diagnostics
-DiagnFreq:                   Monthly
+DiagnFreq:                   Daily
 Wildcard:                    *
 Separator:                   /
 Unit tolerance:              1
@@ -253,7 +253,7 @@ VerboseOnCores:              root       # Accepted values: root all
 # ExtNr	Name sourceFile sourceVar sourceTime C/R/E SrcDim SrcUnit Species ScalIDs Cat Hier
 
 (((EMISSIONS
-
+ 
 0 HFO_Flux /scratch/q90/bk3658/rundirs/HFO_Gridded/emissions_data/gridded_emissions.nc4 __xarray_dataarray_variable__ 2015/1-12/1/0 C xy kg/m2/s HFO 1009 1 55 
 
 #==============================================================================
