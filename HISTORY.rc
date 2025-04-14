@@ -42,14 +42,14 @@ COLLECTIONS: 'Restart',
              ##'KppDiags',
              ##'KppARDiags',
              ##'LevelEdgeDiags',
-             #'ProdLoss',
+             'ProdLoss',
              ##'RRTMG',
              ##'RxnRates',
              ##'RxnConst',
              ##'SatDiagn',
              ##'SatDiagnEdge',
              ##'StateChm',
-             #'StateMet',
+             'StateMet',
              ##'StratBM',
              ##'Tomas',
              ##'UVFlux',
@@ -121,7 +121,7 @@ COLLECTIONS: 'Restart',
 #                                    SpeciesConcMND [molec/cm3]
 #==============================================================================
   SpeciesConc.template:       '%y4%m2%d2_%h2%n2z.nc4',
-  SpeciesConc.frequency:      00000100 000000
+  SpeciesConc.frequency:      00000001 000000
   SpeciesConc.duration:       00000100 000000
   SpeciesConc.mode:           'time-averaged'
   SpeciesConc.fields:         'SpeciesConcVV_?ALL?           ',
@@ -364,7 +364,7 @@ COLLECTIONS: 'Restart',
 # Available for all simuations that have dry-depositing species
 #==============================================================================
   DryDep.template:            '%y4%m2%d2_%h2%n2z.nc4',
-  DryDep.frequency:           00000100 000000
+  DryDep.frequency:           00000001 000000
   DryDep.duration:            00000100 000000
   DryDep.mode:                'time-averaged'
   DryDep.fields:              'DryDep_?DRY?                  ',
@@ -463,8 +463,8 @@ COLLECTIONS: 'Restart',
 # Available for full-chemistry, aerosol-only, tagO3, and tagCO simulations
 #==============================================================================
   ProdLoss.template:          '%y4%m2%d2_%h2%n2z.nc4',
-  ProdLoss.frequency:         00000100 000000
-  ProdLoss.duration:          00010000 000000
+  ProdLoss.frequency:         00000001 000000
+  ProdLoss.duration:          00000100 000000
   ProdLoss.mode:              'time-averaged'
   ProdLoss.fields:            'Prod_?PRD?                    ',
                               'ProdBCPIfromBCPO              ',
@@ -720,7 +720,7 @@ COLLECTIONS: 'Restart',
 # Available for all simulations
 #==============================================================================
   StateMet.template:          '%y4%m2%d2_%h2%n2z.nc4',
-  StateMet.frequency:         00000100 000000
+  StateMet.frequency:         00000001 000000
   StateMet.duration:          00010000 000000
   StateMet.mode:              'time-averaged'
   StateMet.fields:            'Met_AD                        ',
@@ -1320,7 +1320,7 @@ COLLECTIONS: 'Restart',
 # Available for all simulations that have soluble species
 #==============================================================================
   WetLossConv.template:       '%y4%m2%d2_%h2%n2z.nc4',
-  WetLossConv.frequency:      00000100 000000
+  WetLossConv.frequency:      00000001 000000
   WetLossConv.duration:       00000100 000000
   WetLossConv.mode:           'time-averaged'
   WetLossConv.fields:         'WetLossConv_?WET?             ',
@@ -1335,7 +1335,7 @@ COLLECTIONS: 'Restart',
 #==============================================================================
 # Loss due to rainout and washout (per deposited species)
   WetLossLS.template:         '%y4%m2%d2_%h2%n2z.nc4',
-  WetLossLS.frequency:        00000100 000000
+  WetLossLS.frequency:        00000001 000000
   WetLossLS.duration:         00000100 000000
   WetLossLS.mode:             'time-averaged'
   WetLossLS.fields:           'WetLossLS_?WET?               ',

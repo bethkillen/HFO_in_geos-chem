@@ -1,13 +1,17 @@
+Running GEOS-Chem for 2020 06
+Submitting job number 13 in sequence of 13 jobs
+  for new year month: 2020 7
+139334240.gadi-pbs
 
 ======================================================================================
-                  Resource Usage on 2025-01-06 21:42:03:
-   Job Id:             131860378.gadi-pbs
+                  Resource Usage on 2025-04-14 13:26:50:
+   Job Id:             139312371.gadi-pbs
    Project:            q90
    Exit Status:        0
-   Service Units:      176.56
-   NCPUs Requested:    8                      NCPUs Used: 8               
-                                           CPU Time Used: 69:54:23        
-   Memory Requested:   39.06GB               Memory Used: 16.6GB          
-   Walltime requested: 12:00:00            Walltime Used: 09:02:23        
+   Service Units:      180.30
+   NCPUs Requested:    16                     NCPUs Used: 16              
+                                           CPU Time Used: 83:04:03        
+   Memory Requested:   24.41GB               Memory Used: 19.64GB         
+   Walltime requested: 13:00:00            Walltime Used: 05:38:04        
    JobFS requested:    100.0MB                JobFS used: 0B              
 ======================================================================================

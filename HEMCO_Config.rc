@@ -31,7 +31,7 @@ GCAPVERTRES:                 47
 Logfile:                     *
 DiagnFile:                   HEMCO_Diagn.rc
 DiagnPrefix:                 ./OutputDir/HEMCO_diagnostics
-DiagnFreq:                   Daily
+DiagnFreq:                   Monthly
 Wildcard:                    *
 Separator:                   /
 Unit tolerance:              1
@@ -254,7 +254,7 @@ VerboseOnCores:              root       # Accepted values: root all
 
 (((EMISSIONS
  
-0 HFO_Flux /scratch/q90/bk3658/rundirs/HFO_Gridded/emissions_data/gridded_emissions.nc4 __xarray_dataarray_variable__ 2015/1-12/1/0 C xy kg/m2/s HFO 1009 1 55 
+0 HFO_Flux /scratch/q90/bk3658/Year_Sims/HFO_Gridded/emissions_data/gridded_emissions.nc4 __xarray_dataarray_variable__ 2015/1-12/1/0 C xy kg/m2/s HFO 1009 1 55 
 
 #==============================================================================
 # --- APEI (Canada) ---
@@ -3442,19 +3442,20 @@ VerboseOnCores:              root       # Accepted values: root all
 # --- GEOS-Chem restart file ---
 #==============================================================================
 (((GC_RESTART
-* SPC_           ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 SpeciesRst_?ALL?    2019/02/01/01 CYS    xyz 1 * - 1 1
-* DELPDRY        ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Met_DELPDRY         2019/02/01/01 EY   xyz 1 * - 1 1
-* KPP_HVALUE     ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_KPPHvalue      2019/02/01/01 EY   xyz 1 * - 1 1
-* WETDEP_N       ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_WetDepNitrogen 2019/02/01/01 EY   xy  1 * - 1 1
-* DRYDEP_N       ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_DryDepNitrogen 2019/02/01/01 EY   xy  1 * - 1 1
-* SO2_AFTERCHEM  ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_SO2AfterChem   2019/02/01/01 EY   xyz 1 * - 1 1
-* H2O2_AFTERCHEM ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_H2O2AfterChem  2019/02/01/01 EY   xyz 1 * - 1 1
-* AEROH2O_SNA    ./Restarts/GEOSChem.Restart.20190201_0000z.nc4 Chem_AeroH2OSNA     2019/02/01/01 EY   xyz 1 * - 1 1
-* ORVCSESQ       ./Restarts/GEOSChem.Restart.20190201_0000z.nc4.nc4 Chem_ORVCSESQ   2019/02/01/01 EY   xyz 1 * - 1 1
-* JOH            ./Restarts/GEOSChem.Restart.20190201_0000z.nc4.nc4 Chem_JOH        2019/02/01/01 EY   xy  1 * - 1 1
-* JNO2           ./Restarts/GEOSChem.Restart.20190201_0000z.nc4.nc4 Chem_JNO2       2019/02/01/01 EY   xy  1 * - 1 1
-* STATE_PSC      ./Restarts/GEOSChem.Restart.20190201_0000z.nc4.nc4 Chem_StatePSC   2019/02/01/01 EY   xyz count * - 1 1
+* SPC_           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 SpeciesRst_?ALL?    $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* DELPDRY        ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Met_DELPDRY         $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* KPP_HVALUE     ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_KPPHvalue      $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* WETDEP_N       ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_WetDepNitrogen $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
+* DRYDEP_N       ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_DryDepNitrogen $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
+* SO2_AFTERCHEM  ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_SO2AfterChem   $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* H2O2_AFTERCHEM ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_H2O2AfterChem  $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* AEROH2O_SNA    ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_AeroH2OSNA     $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* ORVCSESQ       ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_ORVCSESQ       $YYYY/$MM/$DD/$HH EY   xyz 1 * - 1 1
+* JOH            ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_JOH            $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
+* JNO2           ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_JNO2           $YYYY/$MM/$DD/$HH EY   xy  1 * - 1 1
+* STATE_PSC      ./Restarts/GEOSChem.Restart.$YYYY$MM$DD_$HH$MNz.nc4 Chem_StatePSC       $YYYY/$MM/$DD/$HH EY   xyz count * - 1 1
 )))GC_RESTART
+
 
 #==============================================================================
 # --- GEOS-Chem boundary condition file ---

@@ -65,7 +65,7 @@
 !!!!!!!!!!!!!!!!!!initialization call to user subroutine!!!!!!!!!!!!!!
       INIT = 0
 
-      call X_CH3CHO (W(1),XT,XP,XM, XNEW,
+      call X_CF3CHO (W(1),XT,XP,XM, XNEW,
      &     INIT, MM,TTT,PPP,ISX,ISP,TITLNEW,TITLTBL)
 
             ISXP = ' '
@@ -91,7 +91,7 @@
          I = IBINJ(J)
          if (I .gt. 0) then
 
-      call X_CH3CHO (W(J),XT,XP,XM, XNEW,
+      call X_CF3CHO (W(J),XT,XP,XM, XNEW,
      &      INIT, MM,TTT,PPP,ISX,ISP,TITLNEW,TITLTBL)
 
            FBIN(I) = FBIN(I) + F(J)
@@ -168,7 +168,7 @@
 
 c-------------sample subroutine for fast-JX Xsection generation---------
 c-----------------------------------------------------------------------
-      subroutine X_CH3CHO (WW,XT,XP,XM,XNEW,
+      subroutine X_CF3CHO (WW,XT,XP,XM,XNEW,
      &     INIT, MM,TTT,PPP,ISX,ISP,TITLNEW,TITLTBL)
 c-----------------------------------------------------------------------
 c   WW = wavelength (nm) to calc Xsection for
@@ -196,8 +196,8 @@ c-----------------------------------------------------------------------
       real*8 XXT,XXQ,XXW,FW, QFACT
       integer NW,NB,  N, I,IW,IT
 
-      TITLNEW = 'CH3CHO  '
-      FTBL = 'XCH3CHO_IUPAC.dat'
+      TITLNEW = 'CF3CHO  '
+      FTBL = 'XCF3CHO_JPL.dat'
 
 !---include the Temperatures (p, M) that you want to interpolate to and give tables.
 !---general format for generating all Xsections
@@ -230,9 +230,9 @@ c-----------------------------------------------------------------------
           read(3,'(14x,3f8.0)') (QT3(I),I=1,3)
              write(6,'(a,3f8.0)') ' Temperature:',(QT3(I),I=1,3)
           read(3,'(i4,1x,a)') NW,FORMW
-!---for CH3CHO we have Xsections and QuantumYlds (at 3 T-p's)
+!---for CF3CHO we have Xsections and QuantumYlds (at 3 T-p's)
         do N = 1,NW
-          read(3,FORMW) W(N),XW(N),(QW(N,I),I=1,3)
+        read(3,FORMW) W(N),XW(N),(QW(N,I),I=1,3)
 !         write(6,'(I3,5F12.5)') int(W(N)),XW(N),(QW(N,I),I=1,3)
         enddo
         close(3)

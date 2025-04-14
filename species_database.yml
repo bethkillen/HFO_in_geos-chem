@@ -683,6 +683,44 @@ CF3CO:
   FullName: radical formed from OH abstraction of TFALD
   MW_g: 97.0160
   Is_Gas: true
+CF3CHOHOO:
+  Formula: CF3CH(OH)OO
+  FullName: radical formed from TFALD + HO2
+  MW_g: 131
+  Is_Gas: True
+  Is_Advected: True 
+PCF3CHOHOO:
+  Formula: CF3CH(OH)OO
+  FullName: dummy species to track production of radical formed from TFALD + HO2
+  MW_g: 131
+  Is_Gas: True
+  Is_Advected: True
+LCF3CHOHOO:
+  Formula: CF3CH(OH)OO
+  FullName: dummy species to track loss of radical formed from TFALD + HO2
+  MW_g: 131
+  Is_Gas: True
+  Is_Advected: True
+TR_1:
+  FullName: Dummy species to track production of CF3CHOHOO from TFALD + HO2
+  Is_Gas: True
+  MW_g: 131
+TR_2: 
+  FullName: Dummy species to track loss of CF3CHOHOO from reverse reaction
+  Is_Gas: True
+  MW_g: 131
+PTR_1:
+  FullName: Dummy species to track production of tracer TR_1
+  Is_Gas: True
+  MW_g: 131
+PTR_2:
+  FullName: Dummy specie to track prouction of tracer TR_2
+  Is_Gas: True
+  MW_g: 131
+PCF3CO:
+  FullName: Dummy species to track production of CF3CO
+  Is_Gas: true
+  MW_g: 97.0160
 CH2Br2:
   Formula: CH2Br2
   FullName: Dibromomethane
@@ -1331,12 +1369,12 @@ FRAD:
   Formula: CF3CH(OH)OO  
   Is_Gas: true
   MW_g: 131
-FRAD2:
+CF3CHOHO:
   FullName: radical 
   Formula: CF3CH(OH)O
   Is_Gas: true
   MW_g: 115
-PFRAD2:
+PCF3CHOHO:
   FullName: proxy to show production of FRAD2
   Formula: CF3CH(OH)O
   MW_g: 115
@@ -4736,7 +4774,7 @@ TFA:
   WD_RetFactor: 2.0e-2
 TFALD:
   DD_F0: 1.0
-  DD_Hstar: 10000
+  DD_Hstar: 100000
   Formula: CF3CHO
   FullName: Trifluoroacetaldehyde
   MW_g: 98.024
@@ -4746,7 +4784,7 @@ TFALD:
   Is_DryDep: true
   Is_WetDep: true
   Henry_CR: 5900
-  Henry_K0: 10000
+  Henry_K0: 100000
   WD_RetFactor: 2.0e-2
 TOLU:
   Formula: C7H8
@@ -4817,3 +4855,11 @@ HCO:
   FullName: Hydrogen Carbonate 
   Is_Gas: true
   MW_g: 29.02 
+TR_3:
+  FullName: Tracer for HFC production from ozonolysis
+  Is_Gas: True
+  MW_g: 70.01
+PTR_3:
+  FullName: To track production of TR_3
+  Is_Gas: True
+  MW_g: 70.01

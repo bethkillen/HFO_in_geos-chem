@@ -2,7 +2,7 @@
 #PBS -P q90
 #PBS -q normal
 #PBS -N multi-month
-#PBS -l walltime=12:00:00
+#PBS -l walltime=13:00:00
 #PBS -l wd
 #PBS -l storage=gdata/m19
 #PBS -l ncpus=16
