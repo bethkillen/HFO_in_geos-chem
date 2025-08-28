@@ -678,6 +678,11 @@ CF3:
   FullName: trifluoromethyl radical
   MW_g: 69.006
   Is_Gas: true
+PCF3:
+  Formula: CF3
+  FullName: dummy species to track production of CF3
+  MW_g: 69.006
+  Is_Gas: True
 CF3CO:
   Formula: C2F3O
   FullName: radical formed from OH abstraction of TFALD

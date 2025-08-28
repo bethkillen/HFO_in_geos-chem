@@ -254,7 +254,8 @@ VerboseOnCores:              root       # Accepted values: root all
 
 (((EMISSIONS
  
-0 HFO_Flux /scratch/q90/bk3658/Year_Sims/HFO_Gridded/emissions_data/gridded_emissions.nc4 __xarray_dataarray_variable__ 2015/1-12/1/0 C xy kg/m2/s HFO 1009 1 55 
+0 HFO /scratch/q90/bk3658/Year_Sims/AGAGE/emissions_data/HFO_scaled_HFC_134a.nc4 scaled_emissions  2000/1/1/0 C xy kg/m2/s HFO - 1 55  
+#0 HFO_Flux 1.58444e-12 - 2019/7/1/0-23 E xy kg/m2/s HFO 1011 1 55 
 
 #==============================================================================
 # --- APEI (Canada) ---

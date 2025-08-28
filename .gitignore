@@ -1,23 +1,33 @@
+# Compiled objects, modules, and executables
 *.[oax]
+*.mod
+*.exe
+*.out
+
+# Backup and temporary files
 *~*
 job.*
 log.*
 *.log
 slurm*
-diaginfo.dat
-tracerinfo.dat
-geos
 core.*
+
+# GEOS-Chem restart/output files
 initial_GEOSChem_rst*
 GEOSChem.Restart.*
 HEMCO_restart.*
 OutputDir/GEOSChem.*nc4*
 OutputDir/HEMCO_diagnostics*
+
+# Directories with builds or outputs
 CodeDir
 build
 Plots
 Results
 BenchmarkResults
+
+# Versioning/running metadata
 rundir.version
 runScriptSamples
-README
+*.tcsh
+

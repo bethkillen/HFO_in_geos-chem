@@ -2,7 +2,7 @@
 #PBS -P q90
 #PBS -q normal
 #PBS -N month_test
-#PBS -l walltime=13:00:00
+#PBS -l walltime=16:00:00
 #PBS -l wd
 #PBS -l storage=gdata/m19+scratch/m19
 #PBS -l ncpus=8
