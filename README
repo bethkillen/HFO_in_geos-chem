@@ -1,0 +1,16 @@
+HFO-1234ze(E) in GEOS-Chem
+This repository contains the configuration files for GEOS-Chem simulations of HFO-1234ze(E) atmospheric chemistry, as described in [Killen et al., 2026].
+
+Model version
+GEOS-Chemv14.3.0, run in full-chemistry mode at resolution 4°×5° for 18 months (including 6 months of spin up).
+
+Repository contents
+
+HEMCO_Config.rc — emissions configuration, including HFO-1234ze emissions scaled to HFC-134a observations
+HEMCO_Diagn.rc — HEMCO diagnostics configuration
+HISTORY.rc — model output diagnostics
+geoschem_config.yml — GEOS-Chem run configuration
+species_database.yml — species definitions including HFO-1234ze and degradation products
+HFO_scaled_HFC_134a_2018.nc4 — gridded HFO-1234ze emissions inventory scaled to 2018 HFC-134a data
+run_multimonth.tcsh — script for running multi-month simulations
+photolysis/ — modified Cloud-J photolysis input files for CF₃CHO and related species
