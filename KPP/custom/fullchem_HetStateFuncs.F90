@@ -1,1 +1,0 @@
-../fullchem/fullchem_HetStateFuncs.F90
