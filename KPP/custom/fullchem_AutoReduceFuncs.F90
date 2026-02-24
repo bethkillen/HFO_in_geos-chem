@@ -1,1 +1,0 @@
-../fullchem/fullchem_AutoReduceFuncs.F90
