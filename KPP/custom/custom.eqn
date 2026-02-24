@@ -155,11 +155,15 @@ C3H8       = IGNORE; {C3H8; Propane}
 C4HVP1     = IGNORE; {C4 hydroxy-vinyl-peroxy radicals from HPALDs}
 C4HVP2     = IGNORE; {C4 hydroxy-vinyl-peroxy radicals from HPALDs}
 CCl4       = IGNORE; {CCl4; Carbon tetrachloride}
+CF3CHOHOO  = IGNORE; {radical formed by CF3CHO + HO2}
+CF3CHOHO   = IGNORE; {radical formed by CF3CHOHOO + NO}
 CFC11      = IGNORE; {CCl3F ; CFC-11, R-11, Freon 11}
 CFC12      = IGNORE; {CCl2F2; CFC-12, R-12, Freon 12}
 CFC113     = IGNORE; {C2Cl3F3; CFC-113, Freon 113}
 CFC114     = IGNORE; {C2Cl2F4; CFC-114, Freon 114}
 CFC115     = IGNORE; {C2ClF5; CFC-115, Freon 115}
+CF3CO      = IGNORE; {CF3CO; radical formed from OH abstraction of TFALD}
+CF3        = IGNORE; {CF3; trifluoromethyl radical}
 CH2Br2     = IGNORE; {CH3Br2; Dibromomethane}
 CH2Cl2     = IGNORE; {CH2Cl2; Dichloromethane}
 CH2I2      = IGNORE; {CH2I2; Diiodomethane}
@@ -175,6 +179,7 @@ CH3I       = IGNORE; {CH3I; Methyl iodide}
 CH4        = IGNORE; {CH4; Methane}
 CHBr3      = IGNORE; {CHBr3; Tribromethane}
 CHCl3      = IGNORE; {CHCl3; Chloroform}
+CHFO       = IGNORE; {CHFO; formyl fluoride}
 Cl         = IGNORE; {Cl; Atomic chlorine}
 Cl2        = IGNORE; {Cl2; Molecular chlorine}
 Cl2O2      = IGNORE; {Cl2O2; Dichlorine dioxide}
@@ -195,6 +200,8 @@ ETO        = IGNORE; {hydroxy-alkoxy-ethane radical}
 ETOO       = IGNORE; {hydroxy-peroxy-ethane radical, formed from ethene + OH}
 ETO2       = IGNORE; {CH3CH2OO; Ethylperoxy radical}
 ETP        = IGNORE; {CH3CH2OOH; Ethylhydroperoxide}
+FRAD       = IGNORE; {CF3CH(OH)OO; hydroxyperoxy}
+FRAD2      = IGNORE; {CF3CH(OH)O; hydroxy}
 FURA       = IGNORE; {FURAN conglomerate}
 GLYC       = IGNORE; {HOCH2CHO; Glycoaldehyde}
 GLYX       = IGNORE; {CHOCHO; Glyoxal}
@@ -206,6 +213,7 @@ H2O        = IGNORE; {H2O; Water vapor}
 H2O2       = IGNORE; {H2O2; Hydrogen peroxide}
 HAC        = IGNORE; {HOCH2C(O)CH3; Hydroxyacetone}
 HBr        = IGNORE; {HBr; Hypobromic acid}
+HCO        = IGNORE; {HCO; Hydrogen carbonate}
 HC5A       = IGNORE; {C5H8O2; Isoprene-4,1-hydroxyaldehyde}
 HCFC123    = IGNORE; {C2HCl2F3; HCFC-123, R-123, Freon 123}
 HCFC141b   = IGNORE; {C(CH3)Cl2F; HCFC-141b, R-141b, Freon 141b}
@@ -213,6 +221,8 @@ HCFC142b   = IGNORE; {C(CH3)ClF2; HCFC-142b, R-142b, Freon 142b}
 HCFC22     = IGNORE; {CHClF2 ; HCFC-22, R-22, Freon 22}
 HCl        = IGNORE; {HCl; Hydrochloric acid}
 HCOOH      = IGNORE; {HCOOH; Formic acid}
+HFO        = IGNORE; {HFO-1234-ze; trans-1,3,3,3-tetrafluoropropene}
+HFC        = IGNORE; {HFC-23; fluoroform from photolysis}
 HI         = IGNORE; {HI; Hydrogen iodide}
 HMHP       = IGNORE; {HOCH2OOH; Hydroxymethyl hydroperoxide}
 HMML       = IGNORE; {C4H6O3; Hydroxymethyl-methyl-a-lactone}
@@ -298,6 +308,7 @@ LISOPNO3   = IGNORE; {Dummy spc to track oxidation of ISOP by NO3}
 LNRO2H     = IGNORE; {Dummy spc to track oxidation of NRO2 by HO2}
 LNRO2N     = IGNORE; {Dummy spc to track oxidation of NRO2 by NO}
 LTRO2H     = IGNORE; {Dummy spc to track oxidation of TRO2 by HO2}
+LHFC	   = IGNORE; {Dummy spc to track loss of HFC}
 LTRO2N     = IGNORE; {Dummy spc to track oxidation of TRO2 by NO}
 LVOC       = IGNORE; {C5H14O5; Gas-phase low-volatility non-IEPOX product of ISOPOOH (RIP) oxidation}
 LVOCOA     = IGNORE; {C5H14O5; Aerosol-phase low-volatility non-IEPOX product of ISOPOOH (RIP) oxidation}
@@ -401,12 +412,23 @@ SO4        = IGNORE; {SO4; Sulfate}
 SO4s       = IGNORE; {SO4 on sea-salt; Sulfate}
 SOAGX      = IGNORE; {CHOCHO; Aerosol-phase glyoxal}
 SOAIE      = IGNORE; {C5H10O3; Aerosol-phase IEPOX}
+TFA        = IGNORE; {CF3COOH; trifluoroacetic acid}
+TFALD      = IGNORE; {CF3CHO; trifluoroacetaldehyde}
 TOLU       = IGNORE; {C7H8; Toluene}
+TR_1       = IGNORE; {Dummy species to track production of CF3CHOHOO radical from CF3CHO + HO2}
+TR_2 	   = IGNORE; {Dummy species to track loss of CF3CHOHOO from reverse reaction}
+TR_3       = IGNORE; {Dummy species to track production of HFC from ozonolysis}
 TRO2       = IGNORE; {Peroxy radical from TOLU oxidation}
 XYLE       = IGNORE; {C8H10; Xylene}
 XRO2       = IGNORE; {Peroxy radical from XYLE oxidation}
 PH2SO4     = IGNORE; {SO4 from gas-phase chemistry}
 PSO4AQ     = IGNORE; {SO4 from cloud chemistry}
+CF3CO3     = IGNORE; {CF3CO3}
+CF3COO     = IGNORE; {CF3COO}
+CF3COOOH   = IGNORE; {CF3C(O)OOH}
+CF3COOONO2 = IGNORE; {CF3C(O)OONO2}
+PTFA 	   = IGNORE; {Dummy species to track production of TFA}
+LTFA       = IGNORE; {Dummy species to track loss of TFA}
 
 #DEFFIX
 
@@ -1416,6 +1438,19 @@ XRO2 + HO2 = HO2 + LXRO2H :                  GCARR_abc(1.40d-12, 0.0d0, 700.0d0)
 XRO2 + NO  = NO + LXRO2N  :                  GCARR_abc(2.60d-12, 0.0d0, 350.0d0);                                              {2021/09/29; Bates2021b; KHB,MSL}
 MO2  + NO3 = NO2 + CH2O + HO2 :              1.20d-12;                                                                         {2022/10/18: IUPAC ROO_19; KHB,BMY}
 FURA + OH = BUTDI :                          GCARR_ac(1.32d-11,334.0d0);                                                       {2023/02/07; Carter2022; TSC}
+HFO + OH = TFALD + CHFO :                    GCARR_abc(7.6d-13, -2.44d0, 666.0d0);					       {Antinolo et al}
+TFALD + OH = CF3CO3 + H2O :	             GCARR_abc(3.8d-13, -2.0d0, 131.0d0); 					       {Baumann et al}
+HFO + O3 = 0.0311HFC + 0.0311TR_3:           2.44d-21;									       {McGillen et al}
+HFC + OH = CF3 + H2O :                	     3.1d-16;
+TFALD + HO2 = CF3CHOHOO + TR_1 : 	     GCARR_ac(8.89d-16, 1723.0d0);						       {Long et al}	
+CF3CHOHOO = TFALD + HO2 + TR_2 :             GCARR_ac(2.29d+14, -7621.0d0);						       {Long et al}
+CF3CHOHOO + NO = CF3CHOHO + NO2 :            1.5d-11;									       {Long et al}	
+CF3CO3 + HO2 = 0.09CF3COOOH + 0.38TFA + 0.54CF3COO:	     2.0d-11; 	{Branching ratios from Sulbaek-Andersen (2004)}
+CF3CO3 + NO = CF3COO + NO2:	 	     GCARR_ac(4.0d-12, 560.0d0);						       {IUPAC data sheet}	
+CF3CO3 + NO2 = CF3COOONO2:                   6.6d-12;									       {IUPAC data sheet}
+TFA + OH = CF3COO :		             9.35d-14;									       {Hurley et al}		
+
+
 //
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%% Heterogeneous chemistry reactions                               %%%%%
@@ -1522,6 +1557,7 @@ ITHN = IONITA :                VOCuptk1stOrd( SR_MW(ind_ITHN), 5.0E-3_dp, State_
 MCRHNB = IONITA :              VOCuptk1stOrd( SR_MW(ind_MCRHNB), 5.0E-3_dp, State_Het );                    {2019/11/06; Bates2019; KHB}
 MCRHN = IONITA :               VOCuptk1stOrd( SR_MW(ind_MCRHN), 5.0E-3_dp, State_Het );                     {2019/11/06; Bates2019; KHB}
 NPHEN = AONITA :               VOCuptk1stOrd( SR_MW(ind_NPHEN), 1.0E-2_dp, State_Het );                     {2021/09/29; Bates2021b; KHB,MSL}
+
 //
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%% Photolysis reactions                                            %%%%%
@@ -1728,3 +1764,5 @@ BZCO3H + hv = BENZO2 + OH + CO2 :            PHOTOL(164);    {2021/09/29; Bates2
 BENZP + hv = BENZO :                         PHOTOL(165);    {2021/09/29; Bates2021b; KHB,MSL}
 NPHEN + hv = HNO2 + CO +
  CO2 + AROMP4 + HO2 :                        PHOTOL(166);    {2021/09/29; Bates2021b; KHB,MSL}
+TFALD + hv = CF3 + HCO :                     PHOTOL(167);    {2024/07/09; Killen2024, BK}
+TFALD + hv = HFC + CO :                      PHOTOL(168);    {2024/07/10; Killen2024, BK} 

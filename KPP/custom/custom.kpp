@@ -18,7 +18,24 @@ LCO : CO;
 PSO4 : SO4;
 LCH4 : CH4;
 PH2O2 : H2O2;
+LHFO : HFO;
+PTFALD : TFALD;
+LTFALD : TFALD;
+PHFC : HFC;
+LHFC : HFC;
+PCF3CO : CF3CO;
+PTR_1 : TR_1;
+PTR_2 : TR_2;
+PCF3CHOHOO : CF3CHOHOO;
+LCF3CHOHOO : CF3CHOHOO;
+PCF3CHOHO : CF3CHOHO;
+PTR_3 : TR_3;
+PCF3 : CF3;
+PTFA : TFA
+LTFA : TFA
 
+
+  
 #INLINE F90_RATES
   ! All rates are included in fullchem_RateLawFuncs.F90, which
   ! gets referenced directly from subroutine Update_Rconst.

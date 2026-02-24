@@ -1,27 +1,33 @@
-HEMCO/.git/
-HEMCO/.github/
-HEMCO/.gitignore
+# Compiled objects, modules, and executables
 *.[oax]
 *.mod
-*.MOD
+*.exe
+*.out
+
+# Backup and temporary files
 *~*
-*.swp
-*.bak
-*.patch
-*.diff
-gcclassic
-diffs
-bak
-misc
-*.pp.*
-*.pdb
-*.inst.*
-*.continue.*
-*.ppk
+job.*
+log.*
 *.log
-bin/*
-build/
-build_*/
-*___.h
-*___.rc
+slurm*
 core.*
+
+# GEOS-Chem restart/output files
+initial_GEOSChem_rst*
+GEOSChem.Restart.*
+HEMCO_restart.*
+OutputDir/GEOSChem.*nc4*
+OutputDir/HEMCO_diagnostics*
+
+# Directories with builds or outputs
+CodeDir
+build
+Plots
+Results
+BenchmarkResults
+
+# Versioning/running metadata
+rundir.version
+runScriptSamples
+*.tcsh
+
